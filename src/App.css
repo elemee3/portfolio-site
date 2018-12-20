@@ -9,7 +9,8 @@ main {
 }
 
 .jumbotron {
-  margin-top: 5vh;
+  margin: 5vh auto;
+  max-width: 75vw;
 }
 
 .container {

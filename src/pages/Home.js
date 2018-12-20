@@ -12,7 +12,11 @@ class Home extends Component {
 
         <div className="jumbotron">
           <h4>Full-stack web developer based in San Diego, specializing in JavaScript and Ruby on Rails</h4>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+          <p>Driven by a desire to diagnose and resolve problems big and small using technology-based solutions. Happier with an error message than a successful compile. Seeking to improve diversity in the tech industry. Dreaming of coding the world to a better place.</p>
+
+          <p>I am a self-taught coder who has recently formalized my knowledge and skills at a San Diego coding bootcamp. I am thrilled to have officially joined the tech community; I strive to continuously improve myself and any organization I take part in.</p>
+
         </div>
 
         <div className="container">
