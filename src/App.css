@@ -8,6 +8,26 @@ main {
   margin: 0 auto;
 }
 
+.portfolio-item {
+  margin: 0 2vw;
+  margin-top: 3vh;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.portfolio-button {
+  width: 125px;
+  margin: 0 auto;
+}
+
+.portfolio-tab {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85vw;
+  margin: 5vh auto;
+  justify-content: space-between;
+}
+
 .jumbotron {
   margin: 5vh auto;
   max-width: 75vw;
