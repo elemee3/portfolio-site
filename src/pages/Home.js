@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
-import Amsterdam from '../amsterdam.jpg';
-import Bridge from '../bridge.jpg';
-import Stanford from '../stanford.jpg'
+import Amsterdam from '../images/amsterdam.jpg';
+import Bridge from '../images/bridge.jpg';
+import Stanford from '../images/stanford.jpg'
 
 class Home extends Component {
   render() {

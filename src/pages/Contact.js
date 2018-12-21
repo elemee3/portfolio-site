@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Github from '../GitHub-Logos/GitHub-Logos/GitHub_Logo_White.png';
-import LinkedIn from '../linkedin_brand_package/Logo-2CRev-41px-TM.png';
+import Github from '../images/GitHub_Logo_White.png';
+import LinkedIn from '../images/LinkedIn_Logo.png';
 
 class Contact extends Component {
   render() {
