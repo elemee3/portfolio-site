@@ -8,13 +8,6 @@ main {
   margin: 0 auto;
 }
 
-.portfolio-item {
-  margin: 0 2vw;
-  margin-top: 3vh;
-  max-width: 400px;
-  min-width: 300px;
-}
-
 .portfolio-button {
   width: 125px;
   margin: 0 auto;
@@ -50,7 +43,11 @@ main {
 }
 
 .single-card {
-  max-width: 18vw;
+  margin: 0 2vw;
+  margin-top: 3vh;
+  max-width: 300px;
+  min-width: 100px;
+  height: auto;
 }
 
 .page {

@@ -68,7 +68,7 @@ class Portfolio extends Component {
           <TabPane tabId="1">
             <div className="portfolio-tab">
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>Cat Tinder</CardTitle>
                   <CardSubtitle>ReactJS frontend, Ruby on Rails backend</CardSubtitle>
                   <br/>
@@ -76,7 +76,7 @@ class Portfolio extends Component {
                   <Button className="portfolio-button" href="https://protected-citadel-24964.herokuapp.com/">Launch</Button>
                 </Card>
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>Activity Buddy</CardTitle>
                   <CardSubtitle>ReactJS frontend, Ruby on Rails backend</CardSubtitle>
                   <br/>
@@ -84,7 +84,7 @@ class Portfolio extends Component {
                   <Button className="portfolio-button" href="http://activitybuddy-frontend.herokuapp.com/">Launch</Button>
                 </Card>
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>YummY</CardTitle>
                   <CardSubtitle>Ruby on Rails</CardSubtitle>
                   <br/>
@@ -92,7 +92,7 @@ class Portfolio extends Component {
                   <Button className="portfolio-button" href="#">Coming Soon!</Button>
                 </Card>
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>Pig Latin</CardTitle>
                   <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
                   <br/>
@@ -100,7 +100,7 @@ class Portfolio extends Component {
                   <Button className="portfolio-button" href="https://pig-latify1.herokuapp.com/">Launch</Button>
                 </Card>
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>Battleship</CardTitle>
                   <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
                   <br/>
@@ -108,7 +108,7 @@ class Portfolio extends Component {
                   <Button className="portfolio-button" href="#">Coming Soon!</Button>
                 </Card>
 
-                <Card body className="portfolio-item">
+                <Card body className="single-card">
                   <CardTitle>Tic Tac Toe</CardTitle>
                   <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
                   <br/>
