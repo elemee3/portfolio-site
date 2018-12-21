@@ -122,7 +122,7 @@ class Portfolio extends Component {
           <TabPane tabId="2">
             <Row>
               <Col sm="12">
-                <h4>Tab 2 Contents</h4>
+                <h4>Coming Soon!</h4>
               </Col>
             </Row>
           </TabPane>
@@ -130,7 +130,7 @@ class Portfolio extends Component {
           <TabPane tabId="3">
             <Row>
               <Col sm="12">
-                <h4>Tab 3 Contents</h4>
+                <h4>Coming Soon!</h4>
               </Col>
             </Row>
           </TabPane>
@@ -138,7 +138,7 @@ class Portfolio extends Component {
           <TabPane tabId="4">
             <Row>
               <Col sm="12">
-                <h4>Tab 4 Contents</h4>
+                <h4>Coming Soon!</h4>
               </Col>
             </Row>
           </TabPane>
