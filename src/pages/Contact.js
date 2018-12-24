@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Map from './Map';
 import Github from '../images/GitHub_Logo_White.png';
 import LinkedIn from '../images/LinkedIn_Logo.png';
 
@@ -8,15 +9,16 @@ class Contact extends Component {
       <div className="page">
         <h3>Contact Info</h3>
         <div className="container">
-          <div className="left">
-            <img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="headshot filler" />
-          </div>
-          <div className="right">
+          <div className="contact">
             <p>Leila M. Elshamy</p>
             <p>PO Box 161425</p>
             <p>San Diego, CA 92105</p>
             <br/>
             <p>leila.m.elshamy@gmail.com</p>
+          </div>
+          <br/>
+          <div className="location">
+            <Map />
           </div>
         </div>
         <div className="bottom">

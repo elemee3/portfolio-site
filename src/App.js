@@ -8,7 +8,6 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
-import Tester from './pages/Tester.js';
 import Resume from './pages/Resume';
 
 class App extends Component {
@@ -20,7 +19,6 @@ class App extends Component {
           <Switch>
             <Route exact path="/portfolio" component={Portfolio} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/tester" component={Tester} />
             <Route exact path="/resume" component={Resume} />
             <Route exact path="/" component={Home} />
           </Switch>

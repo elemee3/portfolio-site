@@ -30,8 +30,8 @@ main {
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 85vw;
-  justify-content: space-around;
+  max-width: 90vw;
+  justify-content: space-between;
   padding-bottom: 10vh;
 }
 
@@ -59,14 +59,22 @@ main {
   font-weight: bold;
 }
 
-.left {
-  text-align: left;
+.contact {
+  text-align: right;
+  width: 35vw;
+  min-width: 100px;
+}
+
+.location {
+  height: auto;
+  width: 35vw;
+  min-width: 100px;
 }
 
 #map {
   height: 100%;
 }
-/* Optional: Makes the sample page fill the window. */
+
 html {
   height: 100%;
   margin: 0;
@@ -93,6 +101,7 @@ html {
 
 .bottom img {
   margin: 5vh;
+  min-width: 100px;
 }
 
 .footer {
