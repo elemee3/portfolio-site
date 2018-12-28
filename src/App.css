@@ -66,7 +66,7 @@ main {
 }
 
 .location {
-  height: auto;
+  height: 35vh;
   width: 35vw;
   min-width: 100px;
 }

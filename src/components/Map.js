@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
+const API_KEY = process.env.REACT_APP_MAPS_API_KEY;
+
 class Map extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +18,7 @@ class Map extends Component {
   render() {
     return (
       <GoogleMapReact
-        bootstrapURLKeys={{ key: 'API KEY' }}
+        bootstrapURLKeys={{ key: API_KEY }}
         center={this.state.center}
         zoom={this.state.zoom}
       />
