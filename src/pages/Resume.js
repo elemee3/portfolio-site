@@ -12,6 +12,7 @@ class Resume extends Component {
             <p><span className="bold">LEARN Academy</span>, San Diego, CA — Student</p>
             <p className="bold">OCT 2018 - JAN 2019</p>
             <ul>
+              <li>2018 Edie Windsor Coding Scholar</li>
               <li>Formalizing a self-instructed background and expanding programming skills over 500 coding hours, utilizing contemporary practices such as pair programming and test-driven development</li>
               <li>Designing and constructing decoupled full-stack web applications from conception to deployment, based primarily in JavaScript and Ruby on Rails</li>
               <li>Developing 10+ functional web apps of various complexity in 3 months, ranging from Tic-Tac-Toe to Cat Tinder (all available in <a href="https://github.com/elemee3">Github portfolio</a>)</li>
