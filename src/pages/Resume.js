@@ -4,10 +4,20 @@ class Resume extends Component {
   render() {
     return (
       <div className="page">
-        <h4>Skills</h4>
-        <p>JavaScript | ReactJS | Ruby on Rails | SQL | CLI | RESTful APIs | Agile Development</p>
+        <h4>Tools & Technologies</h4>
+        <p>JavaScript (ES5 & ES6) | ReactJS | Node.js | Ruby on Rails | SQL</p>
+        <p>Git | TDD/BDD | CLI | Linux/Unix | Accessibility | RESTful APIs | Agile Development</p>
         <h4>Experience</h4>
         <div className="resume">
+          <div className="resume-left">
+            <p><span className="bold">BL3NDlabs</span>, San Diego, CA — Development Intern</p>
+            <p className="bold">JAN 2019 - FEB 2019</p>
+            <ul>
+              <li>Developed a SlackBot to provide a caffeine-tracking tool for internal use by the team</li>
+              <li>Utilized several tools for communication among design and development including Zeplin, Jira, and InVision; followed the Slack API best-practices for development with Node.js and ngrok</li>
+            </ul>
+          </div>
+
           <div className="resume-left">
             <p><span className="bold">LEARN Academy</span>, San Diego, CA — Student</p>
             <p className="bold">OCT 2018 - JAN 2019</p>

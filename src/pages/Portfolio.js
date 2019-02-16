@@ -1,14 +1,34 @@
 import React, { Component } from 'react';
 import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardSubtitle, CardText, Row, Col } from 'reactstrap';
 import classnames from 'classnames';
+import ReactModal from 'react-responsive-modal';
+import TicTacToe from '../games/tic-tac-toe/src/TicTacToe';
+
+const modalStyle = {
+  content: {
+    height: '750px',
+    width: '750px',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+};
 
 class Portfolio extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeTab: '1'
+      activeTab: '1',
+      modalIsOpen: false
     }
     this.toggle = this.toggle.bind(this);
+  }
+
+  onOpenModal = () => {
+    this.setState({ modalIsOpen: true });
+  }
+
+  onCloseModal = () => {
+    this.setState({ modalIsOpen: false });
   }
 
   toggle(tab) {
@@ -113,7 +133,15 @@ class Portfolio extends Component {
                   <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
                   <br/>
                   <CardText>A simple game of tic-tac-toe built from scratch in ReactJS. Players alternate turns, beginning with player 'X'. Click one box to play your turn. The game is over when a player gets 3 in a row, or no available squares are left. Try 'Legendary Mode' for an additional challenge!</CardText>
-                  <Button className="portfolio-button" href="http://tttsolo.herokuapp.com/">Launch</Button>
+                  <Button className="portfolio-button" onClick={this.onOpenModal}>Launch</Button>
+                  <ReactModal
+                    style={modalStyle}
+                    open={this.state.modalIsOpen}
+                    onClose={this.onCloseModal}
+                  >
+                    <TicTacToe />
+                  </ReactModal>
+
                 </Card>
               </div>
 
