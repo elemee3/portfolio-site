@@ -32,7 +32,7 @@ class Portfolio extends Component {
     return (
       <div className="page">
         <h3>Portfolio</h3>
-        <div className="portfolio-tab">
+        <div className="portfolio">
 
             <Card body className="single-card">
               <CardTitle>Cat Tinder</CardTitle>
@@ -55,7 +55,9 @@ class Portfolio extends Component {
               <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
               <br/>
               <CardText>A simple game of tic-tac-toe built from scratch in ReactJS. Players alternate turns, beginning with player 'X'. The game is over when a player gets 3 in a row, or no empty squares are left. Try 'Legendary Mode' for an additional challenge!</CardText>
-              <Button className="portfolio-button" onClick={this.onOpenModal}>Open</Button>
+              <Button className="portfolio-button" onClick={this.onOpenModal}>Play Now</Button>
+              <br/>
+              <Button className="portfolio-button" href="https://github.com/elemee3/portfolio-site/blob/master/src/games/tic-tac-toe/TicTacToe.js">View Code</Button>
               <ReactModal
                 style={modalStyle}
                 open={this.state.modalIsOpen}

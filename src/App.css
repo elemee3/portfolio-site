@@ -9,30 +9,23 @@ main {
 }
 
 .portfolio-button {
-  width: 125px;
+  max-width: 125px;
   margin: 0 auto;
 }
 
-.portfolio-tab {
+.portfolio {
   display: flex;
   flex-wrap: wrap;
   width: 85vw;
+  max-width: 1200px;
   margin: 5vh auto;
+  padding: 5px;
   justify-content: space-between;
 }
 
 .jumbotron {
   margin: 5vh auto;
   max-width: 75vw;
-}
-
-.Modal {
-  position: absolute;
-  top: 40px;
-  left: 40px;
-  right: 40px;
-  bottom: 40px;
-  background-color: yellow;
 }
 
 .container {
