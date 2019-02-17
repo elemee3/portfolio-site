@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardSubtitle, CardText, Row, Col } from 'reactstrap';
-import classnames from 'classnames';
+import { Card, Button, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import ReactModal from 'react-responsive-modal';
-import TicTacToe from '../games/tic-tac-toe/src/TicTacToe';
+import TicTacToe from '../games/tic-tac-toe/TicTacToe';
 
 const modalStyle = {
   content: {
