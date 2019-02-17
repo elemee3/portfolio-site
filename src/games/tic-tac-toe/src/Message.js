@@ -1,25 +1,16 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 class Message extends Component {
-  constructor(props) {
-    super(props)
-  }
-  
   formatMessage = () => {
     let { player, endGameMessage } = this.props
-    if (endGameMessage === 'Game over, losers') {     // if no one wins
+    if (endGameMessage[0] === 'G') {          // if Game Over
       return endGameMessage;
-    } else if (endGameMessage !== '') {               // if there is a winner
-      let winner = '';
-      if (player === 'X') {
-        winner = 'O';
-      } else {
-        winner = 'X';
-      };
-      return endGameMessage + ' ' + winner;
-    } else {                                         // if the game isn't over yet
+    } else if (endGameMessage[0] === 'W') {   // if Winner
+      return `${endGameMessage} ${player === 'X' ? 'O' : 'X'}`;
+    } else {                                  // if Still In Play
       return 'Current Player: ' + player;
-    };
+    }
   }
 
   render() {
@@ -27,9 +18,9 @@ class Message extends Component {
       <div style={messageBox}>
         <div style={messageStyles}>
           <h1>Tic Tac Toe</h1>
-          <div style={buttonStyles}>
-            <button>Legendary Mode</button>
-            <button onClick={this.props.reset}>Reset Game</button>
+          <div>
+            <CustomButton onClick={this.props.legendary}>Legendary Mode</CustomButton>
+            <CustomButton onClick={this.props.reset}>Reset Game</CustomButton>
           </div>
         </div>
         <p>{this.formatMessage()}</p>
@@ -38,21 +29,31 @@ class Message extends Component {
   }
 }
 
+const CustomButton = styled.button`
+  margin: 10px 0 0 5px;
+  padding: 5px;
+  background: gray;
+  border-radius: 5px;
+  color: white;
+  border: 0;
+
+  :hover {
+    color: white;
+    background: #212529;
+  }
+`
+
 const messageBox = {
   width: '475px',
   paddingBottom: '50px',
   textAlign: 'center'
-}
+};
 
 const messageStyles = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-between',
   paddingTop: '15px'
-}
-
-const buttonStyles = {
-  paddingTop: '15px'
-}
+};
 
 export default Message;

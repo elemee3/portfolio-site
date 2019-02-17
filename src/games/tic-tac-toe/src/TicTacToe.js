@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Button, ButtonGroup } from 'reactstrap';
-import styled, { css, keyframes } from 'styled-components';
-import Box from './Box';
+import styled, { keyframes } from 'styled-components';
 import Message from './Message';
+import Box from './Box';
 
 class TicTacToe extends Component {
   constructor(props) {
@@ -21,7 +20,7 @@ class TicTacToe extends Component {
     }
   }
 
-  handleAllClicks = (id) => {
+  handleClicks = (id) => {
     let { clickCount, board } = this.state
     if (this.state.activeGame) {
       board[id] = this.playerMessage()
@@ -40,53 +39,42 @@ class TicTacToe extends Component {
     }
   }
 
-  // checks state, returns boolean
   isWin = () => {
     let { board, winList } = this.state
-    let isWin = false
+    let isWin = false;
     //if the board matches a combo in winList, return true
     for (let i = 0; i < winList.length; i++) {
       if (board[winList[i][0]] !== '' &&
           board[winList[i][0]] === board[winList[i][1]] &&
           board[winList[i][1]] === board[winList[i][2]]) {
-        isWin = true
-        //break out of the loop when true
-        return isWin
+        isWin = true;
+        return isWin;
       } else {
-        isWin = false
+        isWin = false;
       }
     }
-    return isWin
+    return isWin;
   }
 
-  // checks state, returns boolean
   isLoss = () => {
     if (this.state.clickCount >= 9) {
-      return true
+      return true;
     } else {
-      return false
+      return false;
     }
   }
 
-  // called by Message component, returns string
   handleGameOver = () => {
     if (this.isWin()) {
-      return 'Winner: '
+      return 'Winner: ';
     } else if (this.isLoss()) {
-      return 'Game over, losers'
+      return 'Game over, losers';
     } else {
-      return ''
+      return '';
     }
   }
 
-  // called by Message component, returns string
-  playerMessage = () => {
-    if (this.state.clickCount % 2 === 0) {
-      return 'X'
-    } else {
-      return 'O'
-    }
-  }
+  playerMessage = () => { return this.state.clickCount % 2 === 0 ? 'X' : 'O' }
 
   toggleSpin = () => {
     this.setState({ spin: !this.state.spin })
@@ -94,7 +82,6 @@ class TicTacToe extends Component {
 
   handleGameReset = () => {
     this.setState({
-      spin: false,
       isReset: true,
       clickCount: 0,
       activeGame: true,
@@ -102,12 +89,24 @@ class TicTacToe extends Component {
     })
   }
 
+  handleLegendary = () => {
+    if (!this.state.spin) {
+      this.setState({
+        spin: true
+      })
+    } else {
+      this.setState({
+        spin: false
+      })
+    }
+  }
+
   render() {
     let { board } = this.state
     let boxes = board.map((box, index) => {
       return (
         <Box  id={index}
-              onAllClicks={this.handleAllClicks}
+              handleClicks={this.handleClicks}
               count={this.state.clickCount}
               activeGame={this.state.activeGame}
               value={this.state.board[index]}
@@ -120,11 +119,18 @@ class TicTacToe extends Component {
         <Message
           player={this.playerMessage()}
           endGameMessage={this.handleGameOver()}
+          legendary={this.handleLegendary}
           reset={this.handleGameReset}
         />
-        <div style={boardStyles}>
-          {boxes}
-        </div>
+        {this.state.spin ?
+          <Legendary style={boardStyles}>
+            {boxes}
+          </Legendary>
+        :
+          <div style={boardStyles}>
+            {boxes}
+          </div>
+        }
       </div>
     );
   }

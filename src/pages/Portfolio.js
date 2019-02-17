@@ -132,7 +132,7 @@ class Portfolio extends Component {
                   <CardTitle>Tic Tac Toe</CardTitle>
                   <CardSubtitle>ReactJS Mini-Game</CardSubtitle>
                   <br/>
-                  <CardText>A simple game of tic-tac-toe built from scratch in ReactJS. Players alternate turns, beginning with player 'X'. Click one box to play your turn. The game is over when a player gets 3 in a row, or no available squares are left. Try 'Legendary Mode' for an additional challenge!</CardText>
+                  <CardText>A simple game of tic-tac-toe built from scratch in ReactJS. Players alternate turns, beginning with player 'X'. The game is over when a player gets 3 in a row, or no empty squares are left. Try 'Legendary Mode' for an additional challenge!</CardText>
                   <Button className="portfolio-button" onClick={this.onOpenModal}>Launch</Button>
                   <ReactModal
                     style={modalStyle}
