@@ -16,7 +16,7 @@ class Message extends Component {
   render() {
     return (
       <div style={messageBox}>
-        <div style={messageStyles}>
+        <div style={headerStyles}>
           <h1>Tic Tac Toe</h1>
           <div>
             <CustomButton onClick={this.props.legendary}>Legendary Mode</CustomButton>
@@ -38,22 +38,23 @@ const CustomButton = styled.button`
   border: 0;
 
   :hover {
-    color: white;
     background: #212529;
   }
 `
 
 const messageBox = {
   width: '475px',
+  maxWidth: '75vw',
   paddingBottom: '50px',
   textAlign: 'center'
 };
 
-const messageStyles = {
+const headerStyles = {
   display: 'flex',
+  flexWrap: 'wrap',
   flexDirection: 'row',
-  justifyContent: 'space-between',
-  paddingTop: '15px'
+  justifyContent: 'space-around',
+  padding: '15px 0 5px 0'
 };
 
 export default Message;

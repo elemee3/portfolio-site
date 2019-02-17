@@ -76,10 +76,6 @@ class TicTacToe extends Component {
 
   playerMessage = () => { return this.state.clickCount % 2 === 0 ? 'X' : 'O' }
 
-  toggleSpin = () => {
-    this.setState({ spin: !this.state.spin })
-  }
-
   handleGameReset = () => {
     this.setState({
       isReset: true,
@@ -90,15 +86,7 @@ class TicTacToe extends Component {
   }
 
   handleLegendary = () => {
-    if (!this.state.spin) {
-      this.setState({
-        spin: true
-      })
-    } else {
-      this.setState({
-        spin: false
-      })
-    }
+    this.setState({ spin: !this.state.spin })
   }
 
   render() {
@@ -136,6 +124,15 @@ class TicTacToe extends Component {
   }
 }
 
+const appStyles = {
+  width: '80vw',
+  maxWidth: '500px',
+  height: '550px',
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center'
+};
+
 const boardStyles = {
   width: '306px',
   height: '306px',
@@ -144,14 +141,6 @@ const boardStyles = {
   flexWrap: 'wrap',
   justifyContent: 'space-around'
 }
-
-const appStyles = {
-  width: '500px',
-  height: '550px',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-};
 
 const BoardSpin = keyframes`
   from {
