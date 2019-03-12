@@ -10,7 +10,8 @@ class Portfolio extends Component {
     super(props)
     this.state = {
       tttModalIsOpen: false,
-      plModalIsOpen: false
+      plModalIsOpen: false,
+      inspoModalIsOpen: false
     }
   }
 
@@ -28,6 +29,14 @@ class Portfolio extends Component {
 
   onClosePLModal = () => {
     this.setState({ plModalIsOpen: false });
+  }
+
+  onOpenInspoModal = () => {
+    this.setState({ inspoModalIsOpen: true });
+  }
+
+  onCloseInspoModal = () => {
+    this.setState({ inspoModalIsOpen: false });
   }
 
   render() {
@@ -69,19 +78,28 @@ class Portfolio extends Component {
             </Card>
 
             <Card body className="single-card">
+              <CardTitle>InspoBot</CardTitle>
+              <CardSubtitle>Node.js, PHP, MySQL</CardSubtitle>
+              <br/>
+              <CardText>InspoBot integrates with the Slack Web API and facilitates submitting pieces of inspiration, allowing your team to vote and ultimately approve or reject your inspiration submission.</CardText>
+              <Button className="portfolio-button" onClick={this.onOpenInspoModal}>See How It Works</Button>
+              <ReactModal
+                open={this.state.inspoModalIsOpen}
+                onClose={this.onCloseInspoModal}
+              >
+                <video width="90%" controls>
+                  <source src="https://s3-us-west-1.amazonaws.com/elemee/inspobot.mp4" type="video/mp4" />
+                Your browser does not support videos
+                </video>
+              </ReactModal>
+            </Card>
+
+            <Card body className="single-card">
               <CardTitle>Cat Tinder</CardTitle>
               <CardSubtitle>ReactJS frontend, Ruby on Rails backend</CardSubtitle>
               <br/>
               <CardText>Cat Tinder is currently a database of cats that can be viewed, added, or deleted by users. Going forward, my goal is to implement a voting mechanism where users can up/down vote cats.</CardText>
               <Button className="portfolio-button" href="https://protected-citadel-24964.herokuapp.com/" target="_blank">Launch (Heroku)</Button>
-            </Card>
-
-            <Card body className="single-card">
-              <CardTitle>InspoBot</CardTitle>
-              <CardSubtitle>Node.js, PHP, MySQL</CardSubtitle>
-              <br/>
-              <CardText>InspoBot integrates with the Slack Web API and facilitates submitting pieces of inspiration, allowing your team to vote and ultimately approve or reject your inspiration submission.</CardText>
-              <Button className="portfolio-button" href="#">See How It Works (Video)</Button>
             </Card>
 
             <Card body className="single-card">
