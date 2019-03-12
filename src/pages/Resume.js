@@ -5,7 +5,7 @@ class Resume extends Component {
     return (
       <div className="page">
         <h4>Tools & Technologies</h4>
-        <p>JavaScript (ES5 & ES6) | ReactJS | Node.js | Ruby on Rails | SQL</p>
+        <p>JavaScript (ES5 & ES6) | ReactJS | Node.js | Ruby on Rails | PHP | SQL</p>
         <p>Git | TDD/BDD | CLI | Linux/Unix | Accessibility | RESTful APIs | Agile Development</p>
         <h4>Experience</h4>
         <div className="resume">
@@ -13,7 +13,7 @@ class Resume extends Component {
             <p><span className="bold">BL3NDlabs</span>, San Diego, CA — Development Intern</p>
             <p className="bold">JAN 2019 - FEB 2019</p>
             <ul>
-              <li>Developed a SlackBot to provide a caffeine-tracking tool for internal use by the team</li>
+              <li>Independently developed two Slackbots based in Node.js for internal use by the team. The first provides a caffeine-tracking tool, the second integrates with AWS S3 and allows the team to submit, vote on, and ultimately post pieces of inspiration to the BL3ND inspiration feed </li>
               <li>Utilized several tools for communication among design and development including Zeplin, Jira, and InVision; followed the Slack API best-practices for development with Node.js and ngrok</li>
             </ul>
           </div>
