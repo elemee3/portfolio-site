@@ -9,7 +9,7 @@ import Home from './pages/Home';
 import Portfolio from './pages/Portfolio';
 import Contact from './pages/Contact';
 import Resume from './pages/Resume';
-import PigLatin from './games/pig-latin/PigLatin';
+
 
 class App extends Component {
   render() {
@@ -18,7 +18,6 @@ class App extends Component {
         <Header />
         <Router>
           <Switch>
-            <Route exact path="/games/piglatin" component={PigLatin} />
             <Route exact path="/portfolio" component={Portfolio} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/resume" component={Resume} />
