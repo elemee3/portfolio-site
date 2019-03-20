@@ -1,10 +1,20 @@
-.App {
-  text-align: center;
-  background-color: #567FA4;
+html {
+  font-family: Arial,helvetica,sans-serif;
+  font-size: 100%;
+}
+
+body {
+  font-size: 1em;
+  font-family: inherit;
 }
 
 main {
   margin: 0 auto;
+}
+
+.App {
+  text-align: center;
+  background-color: #567FA4;
 }
 
 .header {
@@ -175,6 +185,7 @@ main {
     height: 550px;
     width: 100%;
     max-width: 375px;
+    margin: 0 auto;
   }
 
   div.home-card-text {
@@ -213,7 +224,7 @@ main {
   div.home img {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    max-height: 350px;
     margin: 20px auto;
   }
 
@@ -230,9 +241,16 @@ main {
 }
 
 /* Smallest Phones */
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 375px) {
   div.hero {
     height: 700px;
+  }
+
+  div.home img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    margin: 20px auto;
   }
 }
 

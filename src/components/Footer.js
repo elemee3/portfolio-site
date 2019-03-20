@@ -9,7 +9,7 @@ class Footer extends Component {
         </div>
         <div className="footer-mobile">
           <p>(C) 2019 Leila M. Elshamy</p>
-          <p>This site is build with ReactJS</p> 
+          <p>This site is built with ReactJS</p> 
         </div>
       </div>
     );
