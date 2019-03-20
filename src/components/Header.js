@@ -29,11 +29,14 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="dark" dark expand="md">
+        <Navbar dark expand="md">
         <NavbarBrand href="/">Leila M. Elshamy</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
+              <NavItem>
+                <NavLink href="/">Home</NavLink>
+              </NavItem>
               <NavItem>
                 <NavLink href="/resume">Resume</NavLink>
               </NavItem>
