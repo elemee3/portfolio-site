@@ -28,7 +28,7 @@ class Header extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="header">
         <Navbar dark expand="md">
         <NavbarBrand href="/">Leila M. Elshamy</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
