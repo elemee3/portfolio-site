@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 import Amsterdam from '../images/amsterdam.jpg';
 import Bridge from '../images/bridge.jpg';
@@ -10,40 +9,56 @@ class Home extends Component {
     return (
       <main>
 
-        <div className="jumbotron">
-          <h4>Full-stack web developer based in San Diego, specializing in JavaScript and Ruby on Rails</h4>
+        <div className="hero">
+          <div className="hero-text">
+            <h4>Full-stack web developer based in San Diego, CA</h4>
 
-          <p>Driven by a desire to diagnose and resolve problems big and small using technology-based solutions. Happier with an error message than a successful compile. Seeking to improve diversity in the tech industry. Dreaming of coding the world to a better place.</p>
+            <p>I am driven by a desire to diagnose and resolve problems using technology-based solutions. I find great joy in designing beautiful digital products, constructing supporting architecture, and squashing bugs. I dream of coding the world to a better place; an outcome only possible with a more diverse and welcoming tech community.</p>
+            <p>My ultimate goal is to continue establishing myself in the field, so that I can help open the world of technology to more young women and non-binary people, non-traditional educational backgrounds, low-income communities, and other under-represented groups.</p>
 
-          <p>I am a self-taught coder who has recently formalized my knowledge and skills at a San Diego coding bootcamp. I am thrilled to have officially joined the tech community; I strive to continuously improve myself and any organization I take part in.</p>
-
+          </div>
         </div>
 
-        <div className="container">
-          <Card className="single-card">
-            <CardImg top width="100%" src={Amsterdam} alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Resume</CardTitle>
-              <CardSubtitle>View current resume</CardSubtitle><br/>
-              <Button href="/resume" alt="resume">Go</Button>
-            </CardBody>
-          </Card>
-          <Card className="single-card">
-            <CardImg top width="100%" src={Bridge} alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Portfolio</CardTitle>
-              <CardSubtitle>Explore top projects</CardSubtitle><br/>
-              <Button href="/portfolio" alt="portfolio">Go</Button>
-            </CardBody>
-          </Card>
-          <Card className="single-card">
-            <CardImg top width="100%" src={Stanford} alt="Card image cap" />
-            <CardBody>
-              <CardTitle>Contact</CardTitle>
-              <CardSubtitle>Get in touch</CardSubtitle><br/>
-              <Button href="/contact" alt="contact">Go</Button>
-            </CardBody>
-          </Card>
+        <div className="home">
+          <div className="home-card-1">
+            <div className="home-card-content">
+              <img src={Bridge} height="350" alt="portfolio" />
+              <div className="home-card-text">
+                <h2>Explore top projects</h2>
+                <a href="/portfolio" alt="portfolio"><button className="home-button">Portfolio</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-card-2">
+            <div className="home-card-content">
+              <div className="home-card-text">
+                <h2>View current resume</h2>
+                <a href="/resume" alt="resume"><button className="home-button">Resume</button></a>
+              </div>
+              <img src={Amsterdam} height="350" alt="resume" />
+            </div>
+          </div>
+
+          <div className="home-card-2-mobile">
+            <div className="home-card-content">
+              <img src={Amsterdam} height="350" alt="resume" />
+              <div className="home-card-text">
+                <h2>View current resume</h2>
+                <a href="/resume" alt="resume"><button className="home-button">Resume</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div className="home-card-3">
+            <div className="home-card-content">
+              <img src={Stanford} height="350" alt="contact" />
+              <div className="home-card-text">
+                <h2>Get in touch</h2>
+                <a  href="/contact" alt="contact"><button className="home-button">Contact</button></a>
+              </div>
+            </div>
+          </div>
         </div>
 
       </main>
