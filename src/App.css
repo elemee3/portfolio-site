@@ -96,6 +96,20 @@ main {
     padding: 4vh;
     height: 10vh;
   }
+
+  div.portfolio {
+
+  }
+
+  div.portfolio-tab {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90vw;
+    max-width: 1200px;
+    margin: 5vh auto;
+    padding: 5px;
+    justify-content: space-around;
+  }
 }
 
 /* Medium ----------- */
@@ -258,16 +272,6 @@ main {
 .portfolio-button {
   max-width: 125px;
   margin: 0 auto;
-}
-
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  width: 85vw;
-  max-width: 1200px;
-  margin: 5vh auto;
-  padding: 5px;
-  justify-content: space-between;
 }
 
 .hero {
