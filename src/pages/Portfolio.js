@@ -14,7 +14,8 @@ class Portfolio extends Component {
       tttModalIsOpen: false,
       plModalIsOpen: false,
       inspoModalIsOpen: false,
-      activeTab: 'reactjs-1'
+      caffeineModalIsOpen: false,
+      activeTab: 'javascript'
     };
   }
 
@@ -48,6 +49,14 @@ class Portfolio extends Component {
     this.setState({ inspoModalIsOpen: false });
   }
 
+  onOpenCaffeineModal = () => {
+    this.setState({ caffeineModalIsOpen: true });
+  }
+
+  onCloseCaffeineModal = () => {
+    this.setState({ caffeineModalIsOpen: false });
+  }
+
   render() {
     return (
       <div className="page">
@@ -57,10 +66,10 @@ class Portfolio extends Component {
           <Nav tabs>
             <NavItem>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'reactjs-1' })}
-                onClick={() => { this.toggle('reactjs-1'); }}
+                className={classnames({ active: this.state.activeTab === 'javascript' })}
+                onClick={() => { this.toggle('javascript'); }}
               >
-                ReactJS
+                JavaScript
               </NavLink>
             </NavItem>
             <NavItem>
@@ -73,38 +82,21 @@ class Portfolio extends Component {
             </NavItem>
             <NavItem>
               <NavLink
-                className={classnames({ active: this.state.activeTab === 'decoupled-3' })}
-                onClick={() => { this.toggle('decoupled-3'); }}
+                className={classnames({ active: this.state.activeTab === 'more-3' })}
+                onClick={() => { this.toggle('more-3'); }}
               >
-                Decoupled Apps
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: this.state.activeTab === 'more-4' })}
-                onClick={() => { this.toggle('more-4'); }}
-              >
-                More
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                className={classnames({ active: this.state.activeTab === 'non-tech-5' })}
-                onClick={() => { this.toggle('non-tech-5'); }}
-              >
-                Non-Technical
+                More Projects
               </NavLink>
             </NavItem>
           </Nav>
 
           <TabContent activeTab={this.state.activeTab}>
-            <TabPane tabId="reactjs-1">
+            <TabPane tabId="javascript">
               <div className="portfolio-tab">
                 <Card body className="single-card">
                   <CardTitle>Jammming</CardTitle>
                   <br/>
                   <CardText>Search by song, artist, or album and create a playlist using the Spotify API, your new playlist to your account using OAuth 2.0 authentication.</CardText>
-                  <Button className="portfolio-button" href="#">Open App</Button>
                   <br/>
                   <Button className="portfolio-button" href="https://github.com/elemee3/jammming">View Code</Button>
                 </Card>
@@ -144,35 +136,20 @@ class Portfolio extends Component {
                   <CardTitle>Ravenous</CardTitle>
                   <br/>
                   <CardText>Making use of the Yelp API, search for businesses by location and sort by best match, most reviewed, or highest reviewed.</CardText>
-                  <Button className="portfolio-button" href="#">Open App</Button>
-                  <br/>
-                  <Button className="portfolio-button" href="https://github.com/elemee3/ravenous">View Code</Button>
+                  <Button className="portfolio-button" href="#">Coming Soon!</Button>
                 </Card>
 
                 <Card body className="single-card">
                   <CardTitle>Battleship</CardTitle>
                   <br/>
                   <CardText>One-player version of Battleship, you have 25 chances to hit and sink all 8 ships on the board.</CardText>
-                  <Button className="portfolio-button" href="#">Play Now</Button>
                   <br/>
-                  <Button className="portfolio-button" href="https://github.com/elemee3/battleship">View Code</Button>
+                  <Button className="portfolio-button" href="https://github.com/elemee3/portfolio-site/tree/master/src/games/battleship">View Code</Button>
                 </Card>
               </div>
             </TabPane>
 
             <TabPane tabId="ruby-rails-2">
-              <div className="portfolio-tab">
-                <Card body className="single-card">
-                  <CardTitle>YummY</CardTitle>
-                  <CardSubtitle>Ruby on Rails</CardSubtitle>
-                  <br/>
-                  <CardText>Work In Progress - Full Stack Recipe Catalog</CardText>
-                  <Button className="portfolio-button" href="#">Coming Soon!</Button>
-                </Card>
-              </div>
-            </TabPane>
-
-            <TabPane tabId="decoupled-3">
               <div className="portfolio-tab">
                 <Card body className="single-card">
                   <CardTitle>Cat Tinder</CardTitle>
@@ -189,10 +166,19 @@ class Portfolio extends Component {
                   <CardText>Activity Buddy is a full-stack app that includes authetication/authorization via Devise. It allows a user to register with their address and activity preference, and locate other users near them.</CardText>
                   <Button className="portfolio-button" href="http://activitybuddy-frontend.herokuapp.com/" target="_blank">Launch (Heroku)</Button>
                 </Card>
+
+                <Card body className="single-card">
+                  <CardTitle>YummY</CardTitle>
+                  <CardSubtitle>Ruby on Rails</CardSubtitle>
+                  <br/>
+                  <CardText>Work In Progress - Full Stack Recipe Catalog</CardText>
+                  <Button className="portfolio-button" href="#">Coming Soon!</Button>
+                </Card>
               </div>
             </TabPane>
 
-            <TabPane tabId="more-4">
+
+            <TabPane tabId="more-3">
               <div className="portfolio-tab">
                 <Card body className="single-card">
                   <CardTitle>InspoBot</CardTitle>
@@ -210,11 +196,41 @@ class Portfolio extends Component {
                     </video>
                   </ReactModal>
                 </Card>
-              </div>
-            </TabPane>
 
-            <TabPane tabId="non-tech-5">
-              <div className="portfolio-tab">
+                <Card body className="single-card">
+                  <CardTitle>Gumball Capital</CardTitle>
+                  <CardSubtitle>WordPress Site</CardSubtitle>
+                  <br/>
+                  <CardText>I built this site as a member of the Social Entrepreneurs of Grinnell, a non profit based in providing micro-finance opportunities to those in need. Gumball Capital was a fundraising event that required a site for publicizing information such as participant details and announcements.</CardText>
+                  <Button className="portfolio-button" href="https://gumballgrinnell.wordpress.com/" target="_blank">View Site</Button>
+                </Card>
+
+                <Card body className="single-card">
+                  <CardTitle>CaffeineBot</CardTitle>
+                  <CardSubtitle>Node.js, PHP, MySQL</CardSubtitle>
+                  <br/>
+                  <CardText>CaffeineBot can be used by a team to track caffeine consumption around the office, add new drinks to the database, and see who has consumed the most caffeine in a given week.</CardText>
+                  <Button className="portfolio-button" onClick={this.onOpenCaffeineModal}>See How It Works</Button>
+                  <ReactModal
+                    open={this.state.caffeineModalIsOpen}
+                    onClose={this.onCloseCaffeineModal}
+                  >
+                    <video width="90%" controls>
+                      <source src="https://s3-us-west-1.amazonaws.com/elemee/caffeinebot.mp4" type="video/mp4" />
+                    Your browser does not support videos
+                    </video>
+                  </ReactModal>
+                </Card>
+
+                <Card body className="single-card">
+                  <CardTitle>Cornstock</CardTitle>
+                  <CardSubtitle>WordPress Site</CardSubtitle>
+                  <br/>
+                  <CardText>Cornstock was a one-time event designed to bring together the residents of the town of Grinnell and students at Grinnell College. In accordance with the socially conscious nature of the event, we decided against wastefully posting notices on paper and instead I created this site as point of reference.</CardText>
+                  <Button className="portfolio-button" href="https://cornstock.wordpress.com/" target="_blank">View Site</Button>
+                </Card>
+
+
               </div>
             </TabPane>
 

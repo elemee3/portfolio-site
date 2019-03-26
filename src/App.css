@@ -364,6 +364,10 @@ html {
   padding: 0;
 }
 
+.resume {
+  background-color: lightgray;
+}
+
 .resume-left {
   text-align: left;
   display: flex;
