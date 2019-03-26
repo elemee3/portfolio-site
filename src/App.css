@@ -34,7 +34,7 @@ main {
   }
 
   div.hero {
-    height: 350px;
+    height: 250px;
   }
 
   div.hero-text {
@@ -115,7 +115,7 @@ main {
 /* Medium ----------- */
 @media only all and (min-width : 501px) and (max-width : 1024px) {
   div.hero {
-    height: 420px;
+    height: 300px;
   }
 
   div.hero-text {
@@ -180,7 +180,7 @@ main {
 /* Most Smartphones ----------- */
 @media only all and (max-width : 500px) {
   div.hero {
-    height: 600px;
+    height: 350px;
   }
 
   div.hero-text {
@@ -257,7 +257,7 @@ main {
 /* Smallest Phones */
 @media only screen and (max-width: 375px) {
   div.hero {
-    height: 700px;
+    height: 400px;
   }
 
   div.home img {
