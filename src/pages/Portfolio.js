@@ -144,6 +144,8 @@ class Portfolio extends Component {
                   <br/>
                   <CardText>One-player version of Battleship, you have 25 chances to hit and sink all 8 ships on the board.</CardText>
                   <br/>
+                  <Button className="portfolio-button" href="/battleship">Play Now</Button>
+                  <br/>
                   <Button className="portfolio-button" href="https://github.com/elemee3/portfolio-site/tree/master/src/games/battleship">View Code</Button>
                 </Card>
               </div>

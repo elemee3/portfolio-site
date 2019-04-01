@@ -3,6 +3,7 @@
   width: 100%;
   max-width: 1002px;
   margin: 0 auto;
+  padding-top: 15px;
 }
 
 .bs-header {
@@ -23,6 +24,10 @@
 
 .white {
   background-color: white;
+}
+
+.blue {
+  background-color: #567FA4;
 }
 
 .board {

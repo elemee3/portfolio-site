@@ -4,7 +4,7 @@ class Box extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      color: ''
+      color: 'blue'
     }
   }
 
@@ -19,6 +19,8 @@ class Box extends Component {
     let color;
     if (!this.props.isActive && this.props.isShip) {
       color = 'red';
+    } else if (this.props.isActive) {
+      color = 'blue';
     };
     return (
       <div style={boxStyles} className={color ? color : this.state.color} onClick={this.handleClick}></div>

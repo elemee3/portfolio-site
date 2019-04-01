@@ -39,17 +39,37 @@ class Battleship extends Component {
     })
   }
 
+  getMessage = () => {
+    let message = '';
+    if (this.state.shipHits === 8) {
+      message = 'You sunk all the battleships!';
+      return message;
+    };
+    if (this.state.torpedos <= 0) {
+      message = 'You Lose';
+      return message;
+    };
+    return message;
+  }
+
+  checkForLoss = () => {
+    if (this.state.torpedos <= 1) {
+      this.deactivateBox(this.state.shipLocations);
+    };
+  }
+
   handleClick = (boxId) => {
     let { shipHits, torpedos, deactivated, shipLocations } = this.state;
     if (!deactivated.includes(boxId)) {
       this.deactivateBox(boxId);
       if (shipLocations.includes(boxId)) {
-        this.handleShipHit(boxId)
+        this.handleShipHit(boxId);
         this.setState({
           torpedos: torpedos-1,
           shipHits: shipHits+1
         });
       } else {
+        this.checkForLoss();
         this.setState({ torpedos: torpedos-1 });
       };
     };
@@ -116,7 +136,7 @@ class Battleship extends Component {
     } else {
       deactivated.push(ids);
     };
-    this.setState({ deactivated});
+    this.setState({ deactivated });
   }
 
   generateShips = () => {
@@ -289,11 +309,9 @@ class Battleship extends Component {
       let isShip = false;
       let isActive = true;
       if (this.state.deactivated.includes(id)) {
-        console.log(id + ' is deactivated')
         isActive = false;
       };
       if (this.state.shipLocations.includes(id)) {
-        console.log(id + ' is a ship')
         isShip = true;
       };
       return (
@@ -302,10 +320,13 @@ class Battleship extends Component {
     });
 
     return (
-      <div className="battleship-game">
-        <Header hits={this.state.shipHits} torpedos={this.state.torpedos} resetGame={this.resetGame} />
-        <div className="board">
-          {boxes}
+      <div>
+        <a href="/portfolio"><button>Return to Portfolio</button></a>
+        <div className="battleship-game">
+          <Header hits={this.state.shipHits} torpedos={this.state.torpedos} resetGame={this.resetGame} endGameMessage={this.getMessage} />
+          <div className="board">
+            {boxes}
+          </div>
         </div>
       </div>
     );
