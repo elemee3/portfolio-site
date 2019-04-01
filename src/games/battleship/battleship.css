@@ -17,15 +17,11 @@
   padding: 20px;
 }
 
-.unclicked {
-
-}
-
-.ship-box {
+.red {
   background-color: red;
 }
 
-.non-ship-box {
+.white {
   background-color: white;
 }
 

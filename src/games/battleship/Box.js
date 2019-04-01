@@ -4,28 +4,24 @@ class Box extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      clickStatus: "unclicked"
+      color: ''
     }
   }
 
   handleClick = () => {
-    let status;
-    if (this.props.isShip) {
-      status = "ship-box"
-    } else {
-      status = "non-ship-box"
-    }
-    this.setState({
-      clickStatus: status
-    })
+    this.props.handleClick(this.props.id);
+    if (this.props.isActive) {
+      this.props.isShip ? this.setState({ color: 'red' }) : this.setState({ color: 'white' });
+    };
   }
 
   render() {
-    console.log(this.props.isShip)
+    let color;
+    if (!this.props.isActive && this.props.isShip) {
+      color = 'red';
+    };
     return (
-      <div style={boxStyles} className={this.state.clickStatus} onClick={this.handleClick}>
-        {this.props.id}
-      </div>
+      <div style={boxStyles} className={color ? color : this.state.color} onClick={this.handleClick}></div>
     );
   }
 }

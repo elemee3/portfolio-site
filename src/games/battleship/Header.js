@@ -4,7 +4,10 @@ class Header extends Component {
   render() {
     return (
       <div className="bs-header">
-        <h1>Battleship</h1>
+        <div className="title">
+          <h2>Battleship</h2>
+          <button onClick={this.props.resetGame}>Reset Game</button>
+        </div>
         <h3>{this.props.endGameMessage}</h3>
         <div>
           <p>Ships Hit: {this.props.hits}</p>
@@ -14,6 +17,5 @@ class Header extends Component {
     );
   }
 }
-
 
 export default Header;
