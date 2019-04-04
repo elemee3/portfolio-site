@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Resume from './pages/Resume';
 
 import Battleship from './games/battleship/Battleship.js';
+require('dotenv').config();
 
 class App extends Component {
   render() {
